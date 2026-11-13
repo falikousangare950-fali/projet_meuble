@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    position: relative;
+    
+   
+   
+    
+}
+header{
+    background-color: black;
+    text-transform: uppercase;
+    z-index: 1000;
+   
+    
+    
+}
+.starting{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.starting img{
+    height: 20%;
+    width: 80px;
+}
+nav ul li  {
+    
+    list-style-type: none;
+    display: flex;
+    border-radius: 70px;
+     
+}
+nav>ul>li:hover {
+    background-color: rgb(170, 165, 160);;
+    padding: 26px;
+    border: 2px solid white;
+
+    
+}
+nav ul li a {
+    text-decoration: none;
+    color: beige;
+    
+}
+nav>ul{
+    display: flex;
+    justify-content: right;
+  
+}
+nav>ul>li{
+    
+    display: block;
+    padding: 25px;
+    
+}
+
+.meubles li{
+    position: relative;
+    padding-top: 5px;
+    
+}
+.meubles-proposition{
+    border-radius: 20px;
+    position: absolute;
+    top: 100%;
+    background-color: rgb(243, 237, 237);
+    visibility: hidden;
+    z-index: 1001;
+    
+}
+.meubles:hover>.meubles-proposition{
+    visibility: visible;
+    
+}
+.meubles-proposition li{
+    padding: 20px;
+    
+    
+}
+.meubles-proposition li:hover{
+ 
+    padding: 26px;
+    border: 3px solid white;
+    
+   
+    
+}
+.meubles-proposition  li a{
+    color: black;
+    background-color: beige;
+    
+}
+
+/* Conteneur global du carrousel */
+.pub {
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    z-index: 1;
+     /* Espace entre chaque image si vous le souhaitez */
+}
+
+.pub img {
+    height: 38rem;
+    width: 80rem;
+    object-fit: cover;
+    display: block;
+    
+    /* Le '4s' indique que le zoom prend 4 secondes pour se faire (vous pouvez mettre 6s ou 8s si vous voulez plus lent) */
+    transition: transform 4s ease-in-out; 
+    
+}
+
+.pub img:hover {
+    transform: scale(1.15);/* Agrandit l'image de 15% en douceur */
+    cursor: pointer;
+}
+
+
+/* Conteneur de chaque bloc image + texte */
+.overlay-container {
+    position: relative;
+    display: inline-block;
+    
+}
+
+/* Boîte qui contient tout le texte par-dessus l'image */
+.texte-sur-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centre parfaitement la boîte au milieu de l'image */
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espace régulier entre le titre, le paragraphe et le lien */
+    width: 80%;
+    
+}
+
+/* Style du titre */
+.titre-principal {
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Style du paragraphe */
+.texte-sur-image p {
+    font-size: large;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+/* Le lien stylisé comme un bouton cliquable */
+.btn-lien {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 35px;
+    border-radius: 70px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-lien:hover {
+    background-color: rgb(170, 165, 160);
+    color: white;
+    border: 1px solid white;
+}
+.nouvauté-test{
+    position: relative;
+}
+.nouvauté-test p {
+    text-align: center;
+    color: white;
+}
+.images-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.9rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+/* Nouveau conteneur pour lier l'image et son texte verticalement */
+.image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le texte horizontalement par rapport à l'image */
+}
+
+.images-2 img {
+    height: 22rem;
+    width: 38rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.liens{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+.liens a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    font-size: larger;
+    border-bottom : 1px solid white;
+}
+.img-3{
+    display: flex;
+    gap: 0.8rem ;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.img-3 img{
+    height: 28rem;
+    width:20.5rem;
+}
+
+.img-3-liens  {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -16rem;
+}
+.img-3-liens p{
+    color: black;
+    text-align: center;
+}
+.img-3-liens  a{
+ color: black;
+}
+.price{
+     display: flex;
+    
+    margin-top: 5rem;
+    justify-content: space-around;
+}
+.price img{
+ height: 21rem;
+ width: 26rem;
+ border-radius: 1.5rem;
+ transition: transform 0.4s ease-in-out;
+}
+.price img:hover{
+    transform: scale(1.05) translateY(-5px);
+}
+
+.price-montant{
+    display: flex;
+    justify-content: space-around;
+    margin-top: -21rem;
+}
+.price-montant p{
+    color: white;
+    background-color: red ;
+    height: 2rem;
+    width: 7rem;
+    text-align: center;
+    border-radius: 20px;
+}
+.contact{
+    text-align: center;
+    margin-top: 25rem;
+}
+.contact p{
+    color: white;
+}
+.information1{
+    margin-top: 1rem ;
+    color: white;
+    margin-left: 7rem ;
+}
+.information{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.information1 p{
+    font-size: larger;
+}
+.information2{
+ margin-right: 2rem;
+}
+input{
+    border-radius: 10px;
+    height: 2.5rem;
+    width: 20rem;
+    margin-top: 1rem;
+}
+
+
+
